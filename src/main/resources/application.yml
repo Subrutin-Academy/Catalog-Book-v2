@@ -10,10 +10,9 @@ server:
   port: 8090
   
 ---
-spring:  config:    activate:      on-profile:      - development
-  
+spring:  config:    activate:      on-profile:      - development    datasource:    hikari:      connection-timeout: 600000      idle-timeout: 600000      max-lifetime: 1800000      maximum-pool-size: 10    url: ${DB_URL}    username: ${DB_USERNAME}    password: ${DB_PASSWORD}  jpa:    database: POSTGRESQL    hibernate:      ddl-auto: update    properties:      hibernate:        dialect: org.hibernate.dialect.PostgreSQLDialect        jdbc:          batch_size: 100        order_inserts: true    show-sql: true      
 server:
-  port: 8003
+  port: 8080
   
 app:
   welcome-text: Hello World from Tedy, this is development server
